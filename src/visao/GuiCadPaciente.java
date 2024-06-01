@@ -111,6 +111,11 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
         jLayeredPane1.add(jtRG);
         jtRG.setBounds(140, 100, 210, 30);
 
+        jcConvenio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcConvenioActionPerformed(evt);
+            }
+        });
         jLayeredPane1.add(jcConvenio);
         jcConvenio.setBounds(140, 300, 150, 30);
 
@@ -161,20 +166,34 @@ public class GuiCadPaciente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jcConvenioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcConvenioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcConvenioActionPerformed
+
     private void cadastrar() {
         try {
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
             Paciente pac = new Paciente();
+            
+            // Validando cadastro
+            // nome, cpf,  data de nascimento, endereço, telefone
+            if (!jlNome.toString().isEmpty() || !jlCpf.toString().isEmpty() || !jlDataNasc.toString().isEmpty() || !jlEndereco.toString().isEmpty() || !jlTelefone.toString().isEmpty()){
+                
+                 pac.setNome(jtNome.getText());
+                pac.setEndereco(jtEndereco.getText());
+                pac.setDataNascimento(sdf.parse(jtDataNasc.getText()));
+                pac.setTelefone(jtTelefone.getText());
+                pac.setCpf(jtCpf.getText());
+                pac.setRg(jtRG.getText());
+            } else {
+               JOptionPane.showMessageDialog(this,
+                        "Atenção!!! \nPreencha todos os campos obrigatórios");
+            }
 
             // Atribuindo valores aos atributos do Paciente com base nos campos preenchidos pelo usuário na tela
-            pac.setNome(jtNome.getText());
-            pac.setEndereco(jtEndereco.getText());
-            pac.setDataNascimento(sdf.parse(jtDataNasc.getText()));
-            pac.setTelefone(jtTelefone.getText());
-            pac.setCpf(jtCpf.getText());
-            pac.setRg(jtRG.getText());
+           
 
             // Verificando se um convênio foi selecionado no JComboBox
             if (!(jcConvenio.getSelectedIndex() == 0)) {
