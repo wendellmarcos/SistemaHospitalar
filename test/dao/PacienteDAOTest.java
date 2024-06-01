@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import modelo.Paciente;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -59,5 +60,21 @@ public class PacienteDAOTest {
         Paciente paciente = new Paciente(1, "Senac", "rua 7", dataExemplo, "0000000000", "9990999090", null, "teste@teste.com.br", 1);
         pacienteDAO.cadastrarPaciente(paciente);
         assertEquals(paciente.getNome(),"Senac");
+    }
+    
+    // Teste para pesquisar nome João
+        @Test
+    public void testBuscarPacientesPorNome() throws SQLException {
+     List<Paciente> resultados = pacienteDAO.buscarPacienteFiltro("João");
+        
+        assertEquals(resultados, "Pesquisa por nome João");
+    }
+
+    // Teste pesquisa telefone
+    @Test
+    public void testBuscarPacientesPorTelefone() throws SQLException {
+        List<Paciente> resultados = pacienteDAO.buscarPacienteFiltro("19999999");
+        
+        assertEquals(resultados, "Nenhum paciente deve ser encontrado com este telefone");
     }
 }
