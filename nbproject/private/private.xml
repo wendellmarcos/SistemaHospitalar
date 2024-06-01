@@ -4,9 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Utilizador/OneDrive/Área%20de%20Trabalho/SENAC%20EAD/SENAC%20ATIVIDADES/SistemaHospitalar/test/dao/PacienteDAOTest.java</file>
-            <file>file:/C:/Users/Utilizador/OneDrive/Área%20de%20Trabalho/SENAC%20EAD/SENAC%20ATIVIDADES/SistemaHospitalar/src/persistencia/ConexaoBanco.java</file>
+            <file>file:/C:/Users/Utilizador/OneDrive/Área%20de%20Trabalho/SENAC%20EAD/SENAC%20ATIVIDADES/SistemaHospitalar/src/visao/GuiJTableBuscaPaciente.java</file>
             <file>file:/C:/Users/Utilizador/OneDrive/Área%20de%20Trabalho/SENAC%20EAD/SENAC%20ATIVIDADES/SistemaHospitalar/src/visao/Menu.java</file>
-            <file>file:/C:/Users/Utilizador/OneDrive/Área%20de%20Trabalho/SENAC%20EAD/SENAC%20ATIVIDADES/SistemaHospitalar/src/dao/DAOFactory.java</file>
             <file>file:/C:/Users/Utilizador/OneDrive/Área%20de%20Trabalho/SENAC%20EAD/SENAC%20ATIVIDADES/SistemaHospitalar/src/dao/PacienteDAO.java</file>
         </group>
     </open-files>

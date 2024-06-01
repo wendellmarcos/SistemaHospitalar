@@ -95,6 +95,11 @@ public class GuiJTableBuscaPaciente extends javax.swing.JInternalFrame {
         jLayeredPane3.add(jlFiltro);
         jlFiltro.setBounds(250, 20, 120, 16);
 
+        jtFiltro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtFiltroActionPerformed(evt);
+            }
+        });
         jtFiltro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtFiltroKeyReleased(evt);
@@ -262,6 +267,10 @@ public class GuiJTableBuscaPaciente extends javax.swing.JInternalFrame {
     private void jcomboFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcomboFiltroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcomboFiltroActionPerformed
+
+    private void jtFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtFiltroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtFiltroActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane jLayeredPane1;
