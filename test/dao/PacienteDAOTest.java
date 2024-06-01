@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
- */
+
 package dao;
 
 import java.sql.SQLException;
@@ -55,10 +52,11 @@ public class PacienteDAOTest {
     @Test
     public void testCadastrarPaciente () throws SQLException, ParseException{
         
+        // nome, cpf,  data de nascimento, endereço, telefone
          SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
          Date dataExemplo = sdf.parse("2024/04/30");
          
-        Paciente paciente = new Paciente(1, "Senac", null, dataExemplo, null, null, null, null, 1);
+        Paciente paciente = new Paciente(1, "Senac", "rua 7", dataExemplo, "0000000000", "9990999090", null, "teste@teste.com.br", 1);
         pacienteDAO.cadastrarPaciente(paciente);
         assertEquals(paciente.getNome(),"Senac");
     }
